@@ -1,5 +1,7 @@
 import Container from "../container";
 import Logo from "./Logo";
+import Search from "./Search";
+import UserMenu from "./UserMenu";
 const Navbar = () => {
     return (
         <div className="fixed w-full bg-white z-10 shadow-sm">
@@ -18,7 +20,9 @@ const Navbar = () => {
                             gap-3
                             md:gap-0
                         ">
-                            <Logo />
+                        <Logo />
+                        <Search />
+                        <UserMenu />
                    </div>
                 </Container>
             </div>
