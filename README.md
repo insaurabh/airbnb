@@ -21,3 +21,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Deployed on Vercel
 
 Live Preview [https://airbnb-clone-inrsaurabh.vercel.app/](https://airbnb-clone-inrsaurabh.vercel.app/)
+
+## Hoks you will learn
+
+1. useCallback ( useMemo vs useCallback )
