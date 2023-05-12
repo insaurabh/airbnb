@@ -25,3 +25,5 @@ Live Preview [https://airbnb-clone-inrsaurabh.vercel.app/](https://airbnb-clone-
 ## Hoks you will learn
 
 1. useCallback ( useMemo vs useCallback )
+2. zustand
+3. use of @ symbol to point the root directory ( in this case app folder). Check tsconfig.json file
