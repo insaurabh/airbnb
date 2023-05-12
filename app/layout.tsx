@@ -1,7 +1,7 @@
 import './globals.css'
 import { Nunito } from 'next/font/google'
 import Navbar from './components/navbar/navbar'
-import Model from './components/models/Model'
+import RegisterModal from './components/models/RegisterModal'
 const fontNunito = Nunito({
   subsets: ['latin']
 })
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fontNunito.className}>
-        <Model />
+        <RegisterModal />
         <Navbar />
           {children}
       </body>
