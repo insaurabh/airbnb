@@ -12,7 +12,6 @@ const Avatar = () => {
             width="30"
             src={avatar}
             priority={true}
-            placeholder="blur"
         />
     );
 }
