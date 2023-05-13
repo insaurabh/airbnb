@@ -2,8 +2,11 @@
 import { AiOutlineMenu } from 'react-icons/ai'
 import Avatar from './../Avatar';
 import MenuItem from './MenuItem';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
+
+
+
 const UserMenu = () => {
     const registerModal = useRegisterModal();
 
@@ -13,6 +16,22 @@ const UserMenu = () => {
         setIsOpen( (value) => !value);
     }, []);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+
+      const checkMobile = () => {
+          const isMobileDevice = window.innerWidth < 768;
+          console.log(`checking ${isMobileDevice}`);
+        setIsMobile(isMobileDevice);
+      };
+
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      return () => {
+        window.removeEventListener('resize', checkMobile);
+      };
+    }, []);
     return (
         <div className="relative">
             <div className="flex flex-row items-center gap-3">
@@ -50,9 +69,12 @@ const UserMenu = () => {
                     hover:shadow-md
                     transition ">
                     <AiOutlineMenu />
-                    <div className="hidden md:block">
+
+                    {
+                       !isMobile &&  <div className="md:block">
                         <Avatar />
-                    </div>
+                        </div>
+                    }
                 </div>
             </div>
             {isOpen && (
